@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GRIV - AI Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+   <link rel="icon" type="image/png" sizes="32x32" href="/static/griv_favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/griv_favicon.png">
+<link rel="manifest" href="/manifest.json"> <!-- for PWAs -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1 id="griv-title">GRIV</h1>
+    <div id="divider"></div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Ask GRIV..." autocomplete="off" />
+        <button type="submit" id="send-btn">Send</button>
+    </form>
+
+    <form id="file-form">
+        <div class="upload-wrapper">
+            <img src="/static/Griv_plus.png" id="upload-icon" alt="Upload" width="60" height="60">
+            <div class="upload-options" id="upload-options">
+                <label for="file-upload">📄 File</label>
+            </div>
+        </div>
+        <input type="file" id="file-upload" accept=".txt,.pdf,.csv,.md,.jpg,.jpeg,.png,.doc,.docx">
+        <input type="file" id="image-upload" accept="image/*">
+        <button type="submit" id="summarize-btn">Summarize File</button>
+    </form>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

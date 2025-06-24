@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('/static/Griv_bg2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #00ffee;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    /* 🔥 Removed text-shadow from body */
+}
+
+#griv-title {
+    font-size: 100px;
+    text-align: center;
+    color: #00ffee;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+    z-index: 1;
+
+    /* 🔥 Only this glows */
+    text-shadow: 0 0 4px #00ffee, 0 0 8px rgba(0, 255, 238, 0.3);
+    animation: softGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes softGlow {
+    from {
+        text-shadow: 0 0 4px #00ffee, 0 0 8px rgba(0, 255, 238, 0.3);
+    }
+    to {
+        text-shadow: 0 0 6px #00ffee, 0 0 12px rgba(0, 255, 238, 0.4);
+    }
+}
+
+.chat-started #griv-title {
+    font-size: 40px;
+    top: 10px;
+    transform: translateX(-50%);
+}
+
+
+#divider {
+    height: 20px;
+    margin: 10px 0;
+    border: none;
+    background: none;
+}
+
+.chat-started #divider {
+    height: 60px;
+}
+
+#chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-box div {
+    padding: 10px 14px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+#chat-box div strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #00FFAA;
+}
+
+.user {
+    background-color: #222;
+    align-self: flex-end;
+    color: #ddd;
+}
+
+.bot {
+    background-color: #333;
+    align-self: flex-start;
+    color: #ffffff;  /* 👈 Now GRIV's text will appear white */
+}
+
+#chat-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    background-color: #00FFAA;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #00d199;
+}
+
+/* CODE BLOCK STYLE */
+.code-block {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    padding: 1em;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+/* COPY BUTTON */
+.copy-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background-color: #555;
+}
+
+/* File & Upload UI */
+#file-upload, #image-upload {
+    display: none;
+}
+
+.upload-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#upload-icon {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s ease;
+}
+
+#upload-icon:hover {
+    transform: scale(1.1);
+}
+
+.upload-options {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 45px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 6px 10px;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 100;
+}
+
+.upload-options label {
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: block;
+    transition: background 0.2s ease;
+}
+
+.upload-options label:hover {
+    background-color: #00ffaa;
+    color: #000;
+}
+
+#summarize-btn {
+    display: none;
+}
+
+.typing-indicator {
+  width: 25px;
+  height: 25px;
+  animation: blink 1s infinite;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+/* for screen fit*/
+
+@media (max-width: 768px) {
+  #griv-title {
+    font-size: 60px;
+    top: 20%;
+  }
+
+  .chat-started #griv-title {
+    font-size: 28px;
+    top: 10px;
+  }
+
+  #chat-box div {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  #user-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  #upload-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .typing-indicator {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  #griv-title {
+    font-size: 40px;
+    top: 25%;
+  }
+
+  #chat-form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #user-input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .upload-wrapper {
+    margin-top: 10px;
+  }
+}
