@@ -219,63 +219,55 @@ button:hover {
 /* for screen fit*/
 
 @media (max-width: 768px) {
-  #griv-title {
-    font-size: 60px;
-    top: 20%;
-  }
+    body {
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+    }
 
-  .chat-started #griv-title {
-    font-size: 28px;
-    top: 10px;
-  }
+    #chat-box {
+        max-height: 65vh;
+        overflow-y: auto;
+        padding: 10px;
+    }
 
-  #chat-box div {
-    max-width: 90%;
-    font-size: 14px;
-  }
+    .user, .bot {
+        font-size: 14px;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
 
-  #user-input {
-    font-size: 14px;
-    padding: 8px;
-  }
+    #chat-form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
 
-  button {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
+    #user-input {
+        flex: 1;
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+    }
 
-  #upload-icon {
-    width: 45px;
-    height: 45px;
-  }
+    #chat-form button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 
-  .typing-indicator {
-    width: 18px;
-    height: 18px;
-  }
-}
+    .copy-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
 
-@media (max-width: 480px) {
-  #griv-title {
-    font-size: 40px;
-    top: 25%;
-  }
-
-  #chat-form {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  #user-input {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  button {
-    width: 100%;
-  }
-
-  .upload-wrapper {
-    margin-top: 10px;
-  }
+    /* Upload buttons or icons */
+    #upload-options {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
 }
