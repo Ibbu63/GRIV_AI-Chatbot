@@ -1,4 +1,4 @@
-# 🤖 GRIV - AI Chatbot with Gemini & File Analysis
+# 🤖 GRIV - AI User-Friendly Chatbot
 
 GRIV is a smart, interactive AI chatbot built using Flask and Google Gemini API. It supports real-time Q&A, file summarization (PDF, text, image OCR), and typing animation for human-like responses.
 
