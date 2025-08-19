@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     height: 100vh;
     padding: 20px;
-    /* 🔥 Removed text-shadow from body */
 }
 
 #griv-title {
@@ -26,8 +25,6 @@ body {
     transform: translate(-50%, -50%);
     transition: all 0.5s ease;
     z-index: 1;
-
-    /* 🔥 Only this glows */
     text-shadow: 0 0 4px #00ffee, 0 0 8px rgba(0, 255, 238, 0.3);
     animation: softGlow 3s ease-in-out infinite alternate;
 }
@@ -90,7 +87,7 @@ body {
 .bot {
     background-color: #333;
     align-self: flex-start;
-    color: #ffffff;  /* 👈 Now GRIV's text will appear white */
+    color: #ffffff;
 }
 
 #chat-form {

@@ -49,7 +49,7 @@ def ask():
     if any(kw in question for kw in ["hi griv", "hello griv", "hey griv", "hai griv","is your name griv"]):
         return jsonify({"answer": f" glad you know my name! 😊"})
 
-    if question in ["hi", "hello", "hey", "hai", "hii", "helo", "heyy"]:
+    if question in ["hi", "hello", "hey", "hai", "hii", "helo", "heyy","hiii"]:
         return jsonify({"answer": f"{time_greet}! GRIV here, how can I assist you today? 😊"})
 
     #cool greeting
@@ -92,14 +92,18 @@ def ask():
     if "i love you" in question or "love you griv" in question:
         return jsonify({'answer': "Aww, I love helping you too! ❤️"})
 
-    if "who created you" in question or "who made you" in question or "who is your developer" in question or "who created u" in question:
-        return jsonify({'answer': "I was built with passion and code by my awesome creator Ibrahim ! 🛠️"})
+    if ("who created you" in question or  "who created u" in question or "who made you" in question or "who is your developer" in question or "who created u" in question):
+        return jsonify({'answer': "I was built with passion and code by my awesome creator Aadil ! 🛠️"})
 
     if "are you real" in question or "are you alive" in question or "do you have feelings" in question:
         return jsonify({'answer': "Not quite alive, but I’m here for real-time conversations! 😄"})
 
     if "good morning" in question or "good afternoon" in question or "good evening" in question:
         return jsonify({'answer': "Wishing you a pleasant day! 😊 What can I help you with?"})
+
+    if "what is my name" in question or "What is my name?" in question or "whts my name" in question or "my name" in question :
+        return jsonify({"answer": "sorry ,i don't know your name. please tell me"})
+
 
     #joke handler
     # 🃏 Smart Joke Handler (avoids repeating last joke)
@@ -141,7 +145,7 @@ def ask():
     if "griv" in question or "griv?" in question or "hey griv" in question:
         return jsonify({'answer': "Yes? I'm here and ready to help! 😊"})
 
-    if "what can you do" in question or "help" in question or "what are your skills" in question:
+    if "what can you do" in question or "help" in question or "what are your skills" in question or "what can u do"in question:
         return jsonify({'answer': "I can answer questions, explain code, summarize files, and more. Just ask! 💡"})
 
         # ⏰ Greeting logic, name, jokes, thank yous... (keep your existing blocks here)
