@@ -93,7 +93,7 @@ def ask():
         return jsonify({'answer': "Aww, I love helping you too! ❤️"})
 
     if ("who created you" in question or  "who created u" in question or "who made you" in question or "who is your developer" in question or "who created u" in question):
-        return jsonify({'answer': "I was built with passion and code by my awesome creator Aadil ! 🛠️"})
+        return jsonify({'answer': "I was built with passion and code by my awesome creator Ibrahim ! 🛠️"})
 
     if "are you real" in question or "are you alive" in question or "do you have feelings" in question:
         return jsonify({'answer': "Not quite alive, but I’m here for real-time conversations! 😄"})
